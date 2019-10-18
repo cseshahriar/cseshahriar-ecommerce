@@ -1,5 +1,7 @@
 <?php
 
+require 'admin.php'; 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,6 +13,8 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function () { 
     return view('welcome');
 });
+
+Route::get('/home', 'HomeController@index')->name('home');
