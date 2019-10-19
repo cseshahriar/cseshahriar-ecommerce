@@ -13,10 +13,12 @@ class DatabaseSeeder extends Seeder
     {
         DB::table('users')->delete();
         DB::table('admins')->delete(); 
+        DB::table('categories')->delete(); 
 
         $this->call([
         	UsersTableSeeder::class,
-        	AdminsTableSeeder::class
+        	AdminsTableSeeder::class,
+            CategoriesTableSeeder::class,
         ]);
     }
 }
