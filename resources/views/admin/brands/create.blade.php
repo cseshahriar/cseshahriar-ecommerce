@@ -17,12 +17,21 @@
                         <div class="form-group">
                             <label class="control-label" for="name">Name <span class="m-l-5 text-danger"> *</span></label>
                             <input class="form-control @error('name') is-invalid @enderror" type="text" name="name" id="name" value="{{ old('name') }}"/>
-                            @error('name') {{ $message }} @enderror
+                            @error('name')  
+                                <div class="invalid-feedback">
+                                    {{ $message }} 
+                                </div>
+                            @enderror  
                         </div>
                         <div class="form-group">
                             <label class="control-label">Brand Logo</label>
                             <input class="form-control @error('logo') is-invalid @enderror" type="file" id="logo" name="logo"/>
-                            @error('logo') {{ $message }} @enderror
+
+                            @error('logo')  
+                                <div class="invalid-feedback">
+                                    {{ $message }} 
+                                </div>
+                            @enderror 
                         </div>
                     </div>
                     <div class="tile-footer">
