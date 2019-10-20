@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         DB::table('categories')->delete(); 
         DB::table('attribute_values')->delete(); 
         DB::table('attributes')->delete();  
+        DB::table('brands')->delete();  
 
         $this->call([
         	UsersTableSeeder::class,
@@ -23,6 +24,7 @@ class DatabaseSeeder extends Seeder
             CategoriesTableSeeder::class,
             AttributesTableSeeder::class,
             AttributeValuesTableSeeder::class,
+            BrandTableSeeder::class,
         ]); 
     }
 }
