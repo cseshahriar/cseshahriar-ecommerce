@@ -1,5 +1,7 @@
 <?php
 
+Route::view('/', 'site.pages.homepage');
+Auth::routes();
 require 'admin.php'; 
 
 /*
@@ -12,9 +14,4 @@ require 'admin.php';
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () { 
-    return view('welcome');
-});
-
 Route::get('/home', 'HomeController@index')->name('home');
