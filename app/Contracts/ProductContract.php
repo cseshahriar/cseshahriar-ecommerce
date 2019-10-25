@@ -1,12 +1,19 @@
 <?php
 namespace App\Contracts;
- 
+
+
 /**
 * Interface ProductContract
 * @package App\Contracts
 */
 interface ProductContract
 {
+    /**
+     * @param $slug
+     * @return mixed
+     */
+    public function findProductBySlug($slug);
+
     /**
     * @param string $order
     * @param string $sort

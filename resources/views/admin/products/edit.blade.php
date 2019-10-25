@@ -117,16 +117,16 @@
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="control-label" for="special_price">Special Price</label>
+                                            <label class="control-label" for="special_price">Sale Price</label>
                                             <input
                                                 class="form-control"
                                                 type="text"
                                                 placeholder="Enter product special price"
-                                                id="special_price"
-                                                name="special_price"
-                                                value="{{ old('special_price', $product->special_price) }}"
+                                                id="sale_price"
+                                                name="sale_price"
+                                                value="{{ old('sale_price', $product->sale_price) }}"
                                             />
-                                        </div>
+                                        </div> 
                                     </div>
                                 </div>
                                 <div class="row">

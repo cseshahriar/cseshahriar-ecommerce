@@ -2,11 +2,15 @@
 
 namespace App\Models;
 
+use App\Models\Product;
+use TypiCMS\NestableTrait;
 use Illuminate\Support\Str;
 use Illuminate\Database\Eloquent\Model;
 
 class Category extends Model
 {
+    use NestableTrait;
+
     protected $table = 'categories';
  
     protected $fillable = [
@@ -42,4 +46,4 @@ class Category extends Model
     {
         return $this->belongsToMany(Product::class, 'product_categories', 'category_id', 'product_id');
     }
-}
+} 

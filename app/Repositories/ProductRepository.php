@@ -17,6 +17,17 @@ use Doctrine\Instantiator\Exception\InvalidArgumentException;
 class ProductRepository extends BaseRepository implements ProductContract
 {
     use UploadAble;
+    
+    /**
+      * @param $slug
+      * @return mixed
+      */
+     public function findProductBySlug($slug)
+     {
+         $product = Product::where('slug', $slug)->first();
+     
+         return $product;
+     }
  
     /**
     * ProductRepository constructor.
